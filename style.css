@@ -10,3 +10,25 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog
 Text Domain: wpcamel
 */
+
+
+
+body {
+    background: #457;
+    color: #fff;
+}
+
+.content{
+    float: left;
+    width: 60%;
+}
+
+.sidebar{
+    width: 40%;
+    float: left;
+}
+
+.sidebar-page {
+    background-color: red;
+    padding: 50px;
+}

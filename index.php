@@ -1,16 +1,24 @@
 <?php
 	get_header();
-
-	get_header('contact');
-
-	echo '<h1>This is Home page</h1>';
-
-	get_header('contact2');
+	?>
+	<div class="content">
+	<?php
+		 if ( have_posts() ) : ?>
+		 <?php while ( have_posts() ) : the_post(); ?>    
+		 
+			 <h1><?php the_title();?></h1><br>
+			 <p><?php the_content();?></p>
+		 
+	 
+		 <?php endwhile; ?>
+	 <?php endif; ?>
 	
-	get_sidebar();
+	?>
+	</div>
 
-	get_sidebar('two');
+	<div class="sidebar">
+		<?php get_sidebar( )?>
+	</div>
 
-	get_footer();
 
-?>
+<?php get_footer();?>
